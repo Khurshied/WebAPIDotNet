@@ -1,13 +1,10 @@
-﻿namespace WebAPIDotNet.Service
+﻿using WebAPIDotNet.DTO;
+using WebAPIDotNet.Models;
+namespace WebAPIDotNet.Service
+
 {
     public interface ICharecterService
     {
-
-        public Task< List<Charecter>> GetAllCharecters();
-
-        public Task<Charecter> GetSingleCharecter();
-
-
-
+        Task<ServiceResponse<GetCharecterDTO>> GetSingleCharecter();
     }
 }

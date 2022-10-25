@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using WebAPIDotNet.DTO;
 using WebAPIDotNet.Service;
 
 namespace WebAPIDotNet.Controllers
@@ -19,7 +20,7 @@ namespace WebAPIDotNet.Controllers
 
 
         [HttpGet(Name = "GetSingle")]
-        public async Task<ActionResult<Charecter>> GetSingle()
+        public async Task<ActionResult<ServiceResponse< GetCharecterDTO>>> GetSingle()
         {
             var result = await _charecterService.GetSingleCharecter();
             return Ok(result);
